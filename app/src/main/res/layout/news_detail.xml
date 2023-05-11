@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="newsData"
+            type="com.ashwani.newyorktimes.data.NewsData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/item_detail"
+            style="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:text="@{newsData.title}"
+            android:textColor="@color/news_title_color"
+            android:textIsSelectable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.NewsDetailFragment" />
+
+        <TextView
+            android:id="@+id/item_abstract"
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:text="@{newsData.abstract}"
+            android:textColor="@color/title_color"
+            android:textIsSelectable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_detail"
+            tools:context=".ui.NewsDetailFragment" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

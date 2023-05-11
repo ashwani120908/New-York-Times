@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">New York Times</string>
+    <string name="title_news_detail">News Detail</string>
+
+    <string name="no_internet">No Internet</string>
+    <string name="something_went_wrong">Something went wrong..</string>
+    <string name="retry">Retry</string>
+</resources>
